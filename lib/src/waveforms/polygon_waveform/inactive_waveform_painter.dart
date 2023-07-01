@@ -30,7 +30,7 @@ class PolygonInActiveWaveformPainter extends InActiveWaveformPainter {
 
     for (var i = 0; i < samples.length; i++) {
       final x = sampleWidth * i;
-      final y = size.height * samples[i];
+      final y = samples[i];
 
       if (i == samples.length - 1) {
         path.lineTo(x, 0);
@@ -38,12 +38,6 @@ class PolygonInActiveWaveformPainter extends InActiveWaveformPainter {
         path.lineTo(x, y);
       }
     }
-
-    //Gets the [alignPosition] depending on [waveformAlignment]
-    final alignPosition = waveformAlignment.getAlignPosition(size.height);
-
-    //Shifts the path along y-axis by amount of [alignPosition]
-    final shiftedPath = path.shift(Offset(0, alignPosition));
     
     canvas.drawPath(shiftedPath, paint);
   }
