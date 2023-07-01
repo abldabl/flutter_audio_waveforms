@@ -30,7 +30,7 @@ class PolygonInActiveWaveformPainter extends InActiveWaveformPainter {
 
     for (var i = 0; i < samples.length; i++) {
       final x = sampleWidth * i;
-      final y = size.height / 2 * samples[i];
+      final y = size.height * samples[i];
 
       if (i == samples.length - 1) {
         path.lineTo(x, 0);
