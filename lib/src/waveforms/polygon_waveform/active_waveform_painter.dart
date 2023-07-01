@@ -29,7 +29,7 @@ class PolygonActiveWaveformPainter extends ActiveWaveformPainter {
 
     for (var i = 0; i < activeSamples.length; i++) {
       final x = sampleWidth * i;
-      final y = size.height * activeSamples[i];
+      final y = activeSamples[i];
       if (isStroked) {
         path.lineTo(x, y);
       } else {
@@ -40,13 +40,7 @@ class PolygonActiveWaveformPainter extends ActiveWaveformPainter {
         }
       }
     }
-
-    //Gets the [alignPosition] depending on [waveformAlignment]
-    final alignPosition = waveformAlignment.getAlignPosition(size.height);
-
-    //Shifts the path along y-axis by amount of [alignPosition]
-    final shiftedPath = path.shift(Offset(0, alignPosition));
-
+   
     canvas.drawPath(shiftedPath, continousActivePaint);
   }
 }
