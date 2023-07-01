@@ -28,7 +28,7 @@ class PolygonInActiveWaveformPainter extends InActiveWaveformPainter {
 
     final path = Path();
 
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < samples.length; i++) {
       final x = sampleWidth * i;
       final y = size.height / 2 * samples[i];
 
