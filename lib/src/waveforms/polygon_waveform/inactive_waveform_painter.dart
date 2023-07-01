@@ -28,7 +28,7 @@ class PolygonInActiveWaveformPainter extends InActiveWaveformPainter {
 
     final path = Path();
 
-    for (var i = 0; i < samples.length; i++) {
+    for (var i = 0; i < 100; i++) {
       final x = sampleWidth * i;
       final y = size.height / 2 * samples[i];
 
@@ -44,7 +44,7 @@ class PolygonInActiveWaveformPainter extends InActiveWaveformPainter {
 
     //Shifts the path along y-axis by amount of [alignPosition]
     final shiftedPath = path.shift(Offset(0, alignPosition));
-
+    
     canvas.drawPath(shiftedPath, paint);
   }
 }
