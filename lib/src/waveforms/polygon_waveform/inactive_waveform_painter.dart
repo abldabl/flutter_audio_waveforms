@@ -39,6 +39,6 @@ class PolygonInActiveWaveformPainter extends InActiveWaveformPainter {
       }
     }
     
-    canvas.drawPath(shiftedPath, paint);
+    canvas.drawPath(path, paint);
   }
 }
