@@ -41,6 +41,6 @@ class PolygonActiveWaveformPainter extends ActiveWaveformPainter {
       }
     }
    
-    canvas.drawPath(shiftedPath, continousActivePaint);
+    canvas.drawPath(path, continousActivePaint);
   }
 }
