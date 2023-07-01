@@ -33,8 +33,8 @@ class PolygonActiveWaveformPainter extends ActiveWaveformPainter {
       if (isStroked) {
         path.lineTo(x, y);
       } else {
-        if (i == activeSamples.length - 1) {
-          path.lineTo(x, 0);
+        if (i == 0 || i == activeSamples.length - 1) {
+        path.moveTo(x, y);
         } else {
           path.lineTo(x, y);
         }
