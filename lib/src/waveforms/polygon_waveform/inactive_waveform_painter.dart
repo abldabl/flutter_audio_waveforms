@@ -32,8 +32,8 @@ class PolygonInActiveWaveformPainter extends InActiveWaveformPainter {
       final x = sampleWidth * i;
       final y = samples[i];
 
-      if (i == samples.length - 1) {
-        path.lineTo(x, 0);
+      if (i == 0 || i == waveform.length - 1) {
+        path.moveTo(x, y);
       } else {
         path.lineTo(x, y);
       }
