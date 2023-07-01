@@ -29,7 +29,7 @@ class PolygonActiveWaveformPainter extends ActiveWaveformPainter {
 
     for (var i = 0; i < activeSamples.length; i++) {
       final x = sampleWidth * i;
-      final y = size.height / 2 * activeSamples[i];
+      final y = size.height * activeSamples[i];
       if (isStroked) {
         path.lineTo(x, y);
       } else {
